@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/site.css">
+    <link rel="stylesheet" href="gallery/css/main.css">
+    <script src="gallery/js/script.js" defer></script>
+    <script src="script/animation.js" defer></script>
+    <script src="script/print-text-anim.js" defer></script>
+    <title>Сайт-портфолио</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="image/paralax/background.png" class="background" alt="background">
+            <img src="image/paralax/foreground.png" class="foreground" alt="foreground">
+            
+                <h1 class="title"></h1>
+            
+        </header>
+        <div class="text-container">
+            <main>
+                <section class="info-block">
+                    <div class="about-me anim-items">
+                        <div class="photo-container">
+                            <img src="image/about-me/photo.png" class="photo" alt="photo">
+                        </div>
+                        <div class="about-me_text">
+                            <h2>Привет!</h2>
+                            <p>
+                                Меня зовут Геннадий, мне 26 лет. Web-разработкой увлекся в 2020 году, после написания
+                                учебного проекта в университете. Самостоятельно изучал HTML, CSS, JS, основы PHP.
+                            </p>
+                            <p>
+                                В web-разработке больше нравится frontend: верстка страниц, создание визуальных эффектов, анимаций, 
+                                проектирование интерфейсов.
+                            </p>    
+                            <p>
+                                Ищу работу(стажировку), готов учиться и развиваться в frontend-разработке.
+                            </p>
+                        </div>
+                    </div>
+                    <h2 class="anim-items">Навыки</h2>
+                    <hr>
+                    <div class="skill-list">
+                        <div class="skill-col">
+                            <div class="skill anim-items">
+                                <img src="image/about-me/html.png" alt="HTML">
+                                <p>Адаптивная, семантическая вёрстка страниц</p>
+                            </div>
+                            <div class="skill anim-items">
+                                <img src="image/about-me/css.png" alt="CSS">
+                                <p>Flex-box, Grid Layout</p>
+                            </div>
+                            <div class="skill anim-items">
+                                <img src="image/about-me/bootstrap.png" alt="Bootstrap">
+                                <p>Верстка с использованием компонентов Bootstrap</p>
+                            </div>
+                        </div>
+                        <div class="skill-col">
+                            <div class="skill anim-items">
+                                <img src="image/about-me/icon-js.png" alt="JS">
+                                <p>Создание интерактивных элементов при помощи JS</p>
+                            </div>
+                            <div class="skill anim-items">
+                                <img src="image/about-me/PHP.png" alt="PHP">
+                                <p>Основы PHP</p>
+                            </div>
+                            <div class="skill anim-items">
+                                <img src="image/about-me/yii2.png" alt="Yii2">
+                                <p>Разработка web-приложений на фреймворке Yii2</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="portfolio">
+                    <div id="gallery-container"></div>
+                    <div id="gallery-container2"></div>
+                    <div id="gallery-container3"></div>
+                    <h2 class="anim-items">Проекты</h2>
+                    <hr>
+                    <div class="project-list">
+                        <div class="project anim-items">
+                            <div class="card-container">
+                                <div id="card1" class="project-card">
+                                    <img src="image/project/internet-provider/1.png" alt="Карта проекта">
+                                </div>
+                            </div>
+                            <div class="description">
+                                <p>
+                                Учебный проект написан на PHP-фреймворке Yii2. Состоит из двух основных модулей:
+                                пользовательского и административного.
+                                Пользовательская часть представляет собой сайт провайдера цифровых услуг с возможностью
+                                оставлять заявки на подключение услуг
+                                через форму обратной связи.
+                                Административная часть приложения предоставляет функционал, позволяющий управлять учётными
+                                записями
+                                работников, наполнением рекламных блоков сайта и новостной ленты, регистрировать,
+                                редактировать и удалять входящие заявки от клиентов.
+                                </p>
+                            </div>
+                            <div class="links">
+                                <div class="link-git">
+                                    <a href="https://github.com/SandMan20208/educational-project-2022/tree/master"  target="_blank">
+                                        <img src="image/git.png" class="git-logo" alt="Git link">
+                                    </a>
+                                </div>
+                                <div class="link-project">
+                                    <a href="" target="_blank">
+                                        <img src="image/project/internet-provider/logo.png" alt="project link">
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project anim-items">
+                            <div class="card-container">
+                                <div id="card2" class="project-card">
+                                    <img src="image/project/security-database/1.png" alt="Карта проекта">
+                                </div>
+                            </div>
+                            <div class="description">
+                                <p>
+                                    Приложение написано на чистом PHP с использованием базы данных MySQL, представляет собой
+                                    интерфейс для
+                                    работы с базой данных пропусков, позволяет добавлять, редактировать, удалять пропуска, а
+                                    так же отслеживает пропуска,
+                                    срок действия которых заканчивается.
+                                </p>
+                                <p>
+                                    Интерфейс простой, разрабатывался для неопытных пользователей ПК. На предприятии заазчика
+                                    Приложение расчитано для работы только на ПК, не имеет адаптивной верстки.
+                                </p>
+                            </div>
+                            <div class="links">
+                                <div class="link-project">
+                                    <a href="">
+                                        <img src="image/project/security-database/logo.png" alt="project link">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project anim-items">
+                            <div class="card-container">
+                                <div id="card3" class="project-card">
+                                    <img src="image/project/gallery/1.png" alt="Карта проекта">
+                                </div>
+                            </div>
+                            <div class="description">
+                                <p>
+                                    Простая галерея для просмотра изображений с классическим интерфейсом, написанная на чистом JS.
+                                    Используется на этой странице для просмотра скриншотов проектов.
+                                </p>
+                            </div>
+                            <div class="links">
+                                <div class="link-git">
+                                    <img src="image/git.png" class="git-logo" alt="Git link">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="info-block">
+                    <h2 class="anim-items">Контакты</h2>
+                    <hr>
+                    <div class="contacts anim-items">
+                        <div class="contact">
+                            <img src="image/contact/281769.png" alt="Gmail">
+                            <div class="text">Gmail</div>
+                        </div>
+                        <div class="contact">
+                            <img src="image/contact/640px-Telegram_Messenger.png" alt="Telegram">
+                            <div class="text">Telegram</div>
+                        </div>
+                        <div class="contact">
+                            <a href="https://vk.com/id72595310" target="_blank">
+                                <img src="image/contact/VK_Blue_Logo_t-340x340.png" alt="VK">
+                            </a>
+                            <a class="text" href="https://vk.com/id72595310">https://vk.com/id72595310</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <div>© 2022 Махиня Геннадий. Сайт-портфолио Web-разработчика.</div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

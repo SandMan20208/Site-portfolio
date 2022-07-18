@@ -1,0 +1,419 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  hr{
+    margin-bottom: 40px;
+  }
+  p{
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+  }
+  
+  header {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -3;
+  }
+  
+  .background,
+  .foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    z-index: -3;
+  }
+  .background{
+    z-index: -3;
+    transform: translateZ(-10px) scale(2.01);
+  }
+  .foreground{
+    transform: translateZ(-5px) scale(1.6);
+    z-index: -1;
+  }
+  .title{
+    position: absolute;
+    width: 100%;
+    /*text-align: center;*/
+    margin: 70vh 5vw 0 5vw;
+    font-style: italic;
+    font-size: 45px;
+    text-shadow: 0 1px 8px rgb(0, 0, 0),
+    1px 0px 8px rgb(0, 0, 0),
+    0px -1px 8px rgb(0, 0, 0),
+    -1px 1px 8px rgb(0, 0, 0);
+    /*color: rgb(203, 203, 233);*/
+    color: white;
+    
+  }
+  
+  .cursor{
+    display: none;
+
+  }
+  .cursor-hide{
+    display: inline;
+  }
+    
+  /* основной фон */
+  .text-container {
+    position: relative;
+    background-color: rgb(255, 255, 255); /*цвет фона */
+    box-shadow: 0px -45px 20px rgba(255, 255, 255, 0.301); /*цвет тени*/
+  }
+  .about-me{
+    display: flex;
+    align-items:flex-start;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  .about-me_text{ 
+    color: rgb(0, 0, 0); 
+    font-size: 22px;
+    text-align: justify;
+    font-style: normal;
+  }
+  .about-me_text h3{
+    margin: 0;
+    padding: 0;
+  }
+  .photo{
+    width: 200px;
+    height: 220px;
+    margin-right: 10px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px white; /*тень фото */
+  }
+  .info-block{
+    width: 90%;
+    margin: 0 auto;
+    font-style: oblique;
+  }
+  .info-block h2{
+    font-size: 25px;
+    font-style: oblique;
+    margin: 0;
+    padding: 0;
+  }
+  .skill-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .skill{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 350px;
+    font-size: 20px;
+  }
+  .skill img{
+    width: 100px;
+    height: 120px;
+    margin-right: 10px;
+  }
+  
+  .portfolio{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    font-style: normal;
+    font-size: 20px;
+  }
+  .portfolio h2{
+    color: rgb(0, 0, 0); /* заголовок ПРОЕКТЫ */
+    font-size: 25px;
+    font-style: oblique;
+    padding: 0;
+    margin: 0;
+  }
+  .project{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+  .card-container{
+    width: 300px;
+    height: 243px;
+  }
+  .project-card{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(20,51,66);
+    border-radius: 5px;
+  }
+  .project-card img{
+    width: 300px;
+    height: 243px;
+    transition: 1s;
+  }
+  .project-card:hover{
+    box-shadow: 0px 0px 20px rgb(138, 139, 224);
+  }
+  .project-card img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .description{
+    box-sizing: border-box;
+    max-width: 700px;
+    min-width: 312px;
+    padding: 0 20px;
+    text-align: justify;
+  }
+  
+  .links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .link-git{
+    background-color: white;
+    border-radius: 10%;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  .link-git:hover{
+    background: url(image/git-hover.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 25px rgb(138, 139, 224);
+    cursor: pointer;
+  }
+  .git-logo{
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+  }
+  .link-project{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+  }
+  .contacts{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  .contacts img{
+    width: 100px;
+    height: 100px;
+  }
+  .contact{
+    text-align: center;
+    width: 200px;
+  }
+  .contact a{
+    text-decoration: none;
+  }
+  .contact a:visited{
+    color: black;
+  }
+  .contact a:hover{
+    text-decoration:underline;
+  }
+  footer {
+    text-align: center;
+    background: url(../image/paralax/footer.png);
+  }
+  footer div{
+    background-color: rgba(201, 201, 201, 0.6);
+    width: 100%;
+    height: 60px;
+    padding-top: 30px;
+
+  }
+  .anim-items{
+    opacity: 0;
+    transition: 1s;
+    transform: scale(1.3);
+  }
+  ._active{
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  @media(max-width: 1000px) and (min-width: 801px){
+    .portfolio{
+      font-size: 16px;
+    }
+    .card-container,
+    .project-card img
+    {
+      width: 270px;
+      height: 219px;
+    }
+    .link-git{
+      height: 80px;
+      width: 80px;
+    }
+    .git-logo{
+      width: 70px;
+      height: 70px;
+    }
+  }
+  @media (max-width: 800px) and (min-width:701px){
+    .background{
+      transform: translateZ(-10px) scale(2.0);
+    }
+    .foreground{
+      transform: translateZ(-5px) scale(1.5);
+    }
+    .title{
+      font-size: 40px;
+    }
+    .about-me_text{ /*блок ОБО МНЕ */
+      font-size: 18px;
+    }
+    .skill{
+      width: 250px;
+      font-size: 16px;
+    }
+    .skill img{
+      width: 90px;
+      height: 108px;
+      margin-right: 10px;
+    }
+    .portfolio{
+      font-size: 14px;
+    }
+    .card-container,
+    .project-card img
+    {
+      width: 243px;
+      height: 197px;
+    }
+    .description{
+      padding: 0 10px;
+    }
+    .link-git{
+      height: 70px;
+      width: 70px;
+    }
+    .git-logo{
+      width: 60px;
+      height: 60px;
+    }
+  }
+  @media (max-width: 700px){
+    .background{
+      transform: translateZ(-10px) scale(2.0);
+    }
+    .foreground{
+      transform: translateZ(-5px) scale(1.5);
+    }
+    .title{
+      font-size: 40px;
+    }
+    .photo{
+      width: 180px;
+      height: 198px;
+      margin-right: 15px;
+      border-radius: 2px;
+      box-shadow: 0px 0px 10px white; /*тень фото */
+    }
+    .about-me_text{ 
+      font-size: 18px;
+    }
+    .skill{
+      width: 250px;
+      font-size: 16px;
+      padding: 5px;
+    }
+    .skill img{
+      width: 81px;
+      height: 97px;
+      margin-right: 5px;
+    }
+    .portfolio{
+      font-size: 14px;
+    }
+    .project{
+      display: block;
+    }
+    .card-container,
+    .project-card img{
+      width: 313px;
+      height: 253px;
+    }
+    .card-container{
+      margin: 10px auto;
+    }
+    .description{
+      padding: 0;
+    }
+    .links{
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    .contacts{
+      font-size: 14px;
+    }
+    .contacts img{
+      width: 70px;
+      height: 70px;
+    }
+  }
+  @media (max-width: 550px){
+    .title{
+      font-size: 30px;
+    }
+    .about-me{
+      display:block;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    .skill-list{
+      display: block;
+      width: 300px;
+      margin: 0 auto;
+    }
+    .skill{
+      width: 300px;
+      font-size: 18px;
+      padding: 5px;
+    }
+
+    .photo{
+      width: 200px;
+      height: 220px;
+      margin: 0 auto;
+    }
+    .photo-container{
+      text-align: center;
+    }
+    .contacts{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .contacts img{
+      width: 70px;
+      height: 70px;
+      margin-right: 20px;
+    }
+    .contact{
+      display: flex;
+      align-items: center;
+      width: 300px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  
+
+  
